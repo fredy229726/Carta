@@ -129,7 +129,7 @@ p {
         text-align: flex;
         justify-content: center;
         padding: 2%;
-        font-size: small;
+        font-size: medium;
         color: white;
     }
 }
