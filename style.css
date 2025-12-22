@@ -24,7 +24,7 @@ h1 {
 }
 
 p {
-    display: flex;
+    text-align: flex;
     justify-content: center;
     padding: 2%;
     font-size: xx-large;
@@ -132,4 +132,5 @@ p {
         font-size: medium;
         color: white;
     }
+
 }
