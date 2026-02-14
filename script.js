@@ -1,20 +1,22 @@
-const createStar = () => {
-    const star = document.createElement('div');
-    star.classList.add('star');
+$(document).ready(function () {
+  var envelope = $("#envelope");
+  var btn_open = $("#open");
+  var btn_reset = $("#reset");
 
-    star.style.left = `${Math.random() * 100}vw`;
-    star.style.top = `${Math.random() * 100}vh`;
+  envelope.click(function () {
+    open();
+  });
+  btn_open.click(function () {
+    open();
+  });
+  btn_reset.click(function () {
+    close();
+  });
 
-    const size = Math.random() * 3 + 1; 
-    star.style.borderWidth = `${size}px`;
-
-    star.style.animationDuration = `${Math.random() * 2 + 2}s`;
-
-    document.body.appendChild(star);
-
-    star.addEventListener('animationend', () => {
-        star.remove();
-    });
-};
-
-setInterval(createStar, 200);
+  function open() {
+    envelope.addClass("open").removeClass("close");
+  }
+  function close() {
+    envelope.addClass("close").removeClass("open");
+  }
+});
